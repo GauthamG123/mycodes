@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Table</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        table {
+            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow-y: auto;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+            border-top: 2px solid #555;
+            border-bottom: 2px solid #555;
+        }
+
+        tbody tr:hover {
+            background-color: #f0f8ff;
+        }
+
+        b {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<h5>Optimised</h5>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+              <th>Month</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Source</th>
+                <th>Average Of Replication Averages</th>
+                <th>StDev Of Replication Averages</th>
+                <th>Minimum Replication Average</th>
+                <th>Maximum Replication Average</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="8">Month 1</td>
+                <td rowspan="4">Customer</td>
+            </tr>
+            <tr>
+                <td>Total Time</td>
+                <td>Entity</td>
+                <td>3.948008833</td>
+                <td>0.040847995</td>
+                <td>3.882396505</td>
+                <td>4.018032156</td>
+            </tr>
+            <tr>
+                <td>VA Time</td>
+                <td>Entity</td>
+                <td>3.519659044</td>
+                <td>0.013903942</td>
+                <td>3.498234551</td>
+                <td>3.548227374</td>
+            </tr>
+            <tr>
+                <td>Wait Time</td>
+                <td>Entity</td>
+                <td>0.428349789</td>
+                <td>0.034840305</td>
+                <td>0.371311964</td>
+                <td>0.496659671</td>
+            </tr>
+            <tr>
+                <td>Drink Type Coffee.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.058259978</td>
+                <td>0.004790898</td>
+                <td>0.050585522</td>
+                <td>0.066997479</td>
+            </tr>
+            <tr>
+                <td>Drink Type Hot Chocolate.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.087191981</td>
+                <td>0.016341884</td>
+                <td>0.065411742</td>
+                <td>0.127269254</td>
+            </tr>
+            <tr>
+                <td>Drink Type Tea.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.031026363</td>
+                <td>0.00292637</td>
+                <td>0.025770907</td>
+                <td>0.036146225</td>
+            </tr>
+            <tr>
+                <td>Payment Counter.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.37234783</td>
+                <td>0.032862835</td>
+                <td>0.320940614</td>
+                <td>0.435432757</td>
+            </tr>
+
+            <tr>
+                <td rowspan="8">Month 2</td>
+                <td rowspan="4">Customer</td>
+            </tr>
+            <tr>
+                <td>Total Time</td>
+                <td>Entity</td>
+                <td>3.948008833</td>
+                <td>0.040847995</td>
+                <td>3.882396505</td>
+                <td>4.018032156</td>
+            </tr>
+            <tr>
+                <td>VA Time</td>
+                <td>Entity</td>
+                <td>3.519659044</td>
+                <td>0.013903942</td>
+                <td>3.498234551</td>
+                <td>3.548227374</td>
+            </tr>
+            <tr>
+                <td>Wait Time</td>
+                <td>Entity</td>
+                <td>0.428349789</td>
+                <td>0.034840305</td>
+                <td>0.371311964</td>
+                <td>0.496659671</td>
+            </tr>
+            <tr>
+                <td>Drink Type Coffee.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.058259978</td>
+                <td>0.004790898</td>
+                <td>0.050585522</td>
+                <td>0.066997479</td>
+            </tr>
+            <tr>
+                <td>Drink Type Hot Chocolate.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.087191981</td>
+                <td>0.016341884</td>
+                <td>0.065411742</td>
+                <td>0.127269254</td>
+            </tr>
+            <tr>
+                <td>Drink Type Tea.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.031026363</td>
+                <td>0.00292637</td>
+                <td>0.025770907</td>
+                <td>0.036146225</td>
+            </tr>
+            <tr>
+                <td>Payment Counter.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.37234783</td>
+                <td>0.032862835</td>
+                <td>0.320940614</td>
+                <td>0.435432757</td>
+            </tr>
+        <tr>
+                <td rowspan="8">Month 3</td>
+                <td rowspan="4">Customer</td>
+            </tr>
+        <tr>
+                <td>Total Time</td>
+                <td>Entity</td>
+                <td>3.657513305</td>
+                <td>0.020819907</td>
+                <td>3.625722114</td>
+                <td>3.703848849</td>
+            </tr>
+            </tr>
+            <tr>>
+                <td>VA Time</td>
+                <td>Entity</td>
+                <td>3.523669226</td>
+                <td>0.013824864</td>
+                <td>3.497193513</td>
+                <td>3.544992156</td>
+            </tr>
+            <tr>
+                <td>Wait Time</td>
+                <td>Entity</td>
+                <td>0.133844079</td>
+                <td>0.012266637</td>
+                <td>0.108747818</td>
+                <td>0.159661313</td>
+            </tr>
+            <tr>
+                <td>Drink Type Coffee.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.010059211</td>
+                <td>0.001636513</td>
+                <td>0.007764526</td>
+                <td>0.012972225</td>
+            </tr>
+            <tr>
+                <td>Drink Type Hot Chocolate.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.11654048</td>
+                <td>0.01863126</td>
+                <td>0.085453237</td>
+                <td>0.146947144</td>
+            </tr>
+            <tr>
+                <td>Drink Type Tea.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.001438949</td>
+                <td>0.000317793</td>
+                <td>0.00075823</td>
+                <td>0.001966399</td>
+            </tr>
+            <tr>
+                <td>Payment Counter.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.114791085</td>
+                <td>0.011410535</td>
+                <td>0.092468442</td>
+                <td>0.135818933</td>
+            </tr>
+        <tr>
+                <td rowspan="8">Month 4</td>
+                <td rowspan="4">Customer</td>
+            </tr>
+        <tr>
+                <td>Total Time</td>
+                <td>Entity</td>
+                <td>3.64955535</td>
+                <td>0.019528476</td>
+                <td>3.606862189</td>
+                <td>3.67446716</td>
+            </tr>
+
+            <tr>
+                <td>VA Time</td>
+                <td>Entity</td>
+                <td>3.522472025</td>
+                <td>0.013644482</td>
+                <td>3.486106267</td>
+                <td>3.535038283</td>
+            </tr>
+            <tr>
+                <td>Wait Time</td>
+                <td>Entity</td>
+                <td>0.127083325</td>
+                <td>0.010603137</td>
+                <td>0.108057439</td>
+                <td>0.143933137</td>
+            </tr>
+            <tr>
+                <td>Drink Type Coffee.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.01467744</td>
+                <td>0.001972655</td>
+                <td>0.011272003</td>
+                <td>0.018186547</td>
+            </tr>
+            <tr>
+                <td>Drink Type Hot Chocolate.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.00358078</td>
+                <td>0.001879505</td>
+                <td>0.000617159</td>
+                <td>0.006930863</td>
+            </tr>
+            <tr>
+                <td>Drink Type Tea.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.002072666</td>
+                <td>0.000334147</td>
+                <td>0.001554186</td>
+                <td>0.002854842</td>
+            </tr>
+            <tr>
+                <td>Payment Counter.Queue</td>
+                <td>Waiting Time</td>
+                <td>Queue</td>
+                <td>0.117557608</td>
+                <td>0.010344353</td>
+                <td>0.097426608</td>
+                <td>0.134180279</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

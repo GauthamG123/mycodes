@@ -1,0 +1,141 @@
+<!-- registration_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            display: inline-block;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<form method="post" action="{% url 'credential:application' %}">
+    {% csrf_token %}
+    <h2>Registration Form</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="not-say">Rather not say</option>
+    </select>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Mail ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea>
+
+    <label for="district">District:</label>
+    <select id="district" name="district">
+        <option value="trivandrum">Trivandrum</option>
+        <option value="kollam">Kollam</option>
+        <option value="alappuzha">Alappuzha</option>
+        <option value="ernakulam">Ernakulam</option>
+        <option value="kozhikode">Kozhikode</option>
+    </select>
+
+    <label for="branch">Branch:</label>
+    <select id="branch" name="branch" required>
+        <option value="branch1">Branch1</option>
+        <option value="branch2">Branch2</option>
+    </select>
+
+    <label for="account-type">Account Type:</label>
+    <select id="account-type" name="account-type" required>
+        <option value="savings">Savings Account</option>
+        <option value="current">Current Account</option>
+    </select>
+
+    <label>Materials Provide:</label>
+    <input type="checkbox" id="debit-card" name="materials" value="debit-card">
+    <label for="debit-card">Debit Card</label>
+
+    <input type="checkbox" id="credit-card" name="materials" value="credit-card">
+    <label for="credit-card">Credit Card</label>
+
+    <input type="checkbox" id="cheque-book" name="materials" value="cheque-book">
+    <label for="cheque-book">Cheque Book</label>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+
+    <div class="message" id="successMessage" style="display: none;">
+        Application accepted. <a href="/">Return to Home</a>
+    </div>
+</form>
+</body>
+</html>

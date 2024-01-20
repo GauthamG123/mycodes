@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Table</title>
+
+</head>
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+              <th>Month</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Source</th>
+                <th>Average Across Replications</th>
+                <th>Half-Width</th>
+                <th>Overall StDev Across Replications</th>
+                <th>Min Replication Value</th>
+                <th>Max Replication Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <td rowspan="13">Month 1</td>
+                <td>System.NumberOut</td>
+                <td>Number Out</td>
+                <td>System</td>
+                <td>5934.5</td>
+                <td>30.25479575</td>
+                <td>42.29328815</td>
+                <td>5828</td>
+                <td>5977</td>
+            </tr>
+            <tr>
+                <td>Barista.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>5936.7</td>
+                <td>30.16972932</td>
+                <td>42.17437347</td>
+                <td>5830</td>
+                <td>5980</td>
+            </tr>
+            <tr>
+                <td>Barista.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.784353115</td>
+                <td>0.005505766</td>
+                <td>0.00769653</td>
+                <td>0.765438431</td>
+                <td>0.792354088</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>3306.3</td>
+                <td>31.88500512</td>
+                <td>44.57216371</td>
+                <td>3210</td>
+                <td>3360</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.656026286</td>
+                <td>0.006214523</td>
+                <td>0.008687305</td>
+                <td>0.636633617</td>
+                <td>0.665357669</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberIn</td>
+                <td>Number In</td>
+                <td>Entity</td>
+                <td>5938.3</td>
+                <td>30.36135546</td>
+                <td>42.44224834</td>
+                <td>5830</td>
+                <td>5983</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberOut</td>
+                <td>Number Out</td>
+                <td>Entity</td>
+                <td>5934.5</td>
+                <td>30.25479575</td>
+                <td>42.29328815</td>
+                <td>5828</td>
+                <td>5977</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>660.3</td>
+                <td>15.36510108</td>
+                <td>21.47893024</td>
+                <td>627</td>
+                <td>693</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.111289096</td>
+                <td>0.002663673</td>
+                <td>0.003723557</td>
+                <td>0.105805347</td>
+                <td>0.116432847</td>
+            </tr>
+            <tr>
+                <td>Service Counter.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>5936.7</td>
+                <td>30.16972932</td>
+                <td>42.17437347</td>
+                <td>5830</td>
+                <td>5980</td>
+            </tr>
+            <tr>
+                <td>Service Counter.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.441959161</td>
+                <td>0.002268945</td>
+                <td>0.003171766</td>
+                <td>0.434925522</td>
+                <td>0.446129743</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>2631.9</td>
+                <td>24.55120928</td>
+                <td>34.32022403</td>
+                <td>2560</td>
+                <td>2662</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.152290971</td>
+                <td>0.001420934</td>
+                <td>0.001986329</td>
+                <td>0.148122128</td>
+                <td>0.154036324</td>
+            </tr>
+            <tr>
+              <td rowspan="13">Month 2</td>
+                <td>System.NumberOut</td>
+                <td>Number Out</td>
+                <td>System</td>
+                <td>6286.4</td>
+                <td>37.34988253</td>
+                <td>52.21153555</td>
+                <td>6219</td>
+                <td>6379</td>
+            </tr>
+            <tr>
+                <td>Barista.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>6288.7</td>
+                <td>36.93325194</td>
+                <td>51.62912615</td>
+                <td>6222</td>
+                <td>6381</td>
+            </tr>
+            <tr>
+                <td>Barista.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.833962367</td>
+                <td>0.007037858</td>
+                <td>0.009838247</td>
+                <td>0.822874152</td>
+                <td>0.856768056</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>3486</td>
+                <td>41.17706036</td>
+                <td>57.56156125</td>
+                <td>3403</td>
+                <td>3596</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.691274971</td>
+                <td>0.008132217</td>
+                <td>0.011368055</td>
+                <td>0.674361148</td>
+                <td>0.713446779</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberIn</td>
+                <td>Number In</td>
+                <td>Entity</td>
+                <td>6291.2</td>
+                <td>36.30869911</td>
+                <td>50.75606149</td>
+                <td>6228</td>
+                <td>6381</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberOut</td>
+                <td>Number Out</td>
+                <td>Entity</td>
+                <td>6286.4</td>
+                <td>37.34988253</td>
+                <td>52.21153555</td>
+                <td>6219</td>
+                <td>6379</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>698.2</td>
+                <td>13.34395785</td>
+                <td>18.65356683</td>
+                <td>668</td>
+                <td>731</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.117451084</td>
+                <td>0.002325971</td>
+                <td>0.003251483</td>
+                <td>0.112038082</td>
+                <td>0.122878993</td>
+            </tr>
+            <tr>
+                <td>Service Counter.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>6288.7</td>
+                <td>36.93325194</td>
+                <td>51.62912615</td>
+                <td>6222</td>
+                <td>6381</td>
+            </tr>
+            <tr>
+                <td>Service Counter.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.467973785</td>
+                <td>0.002930488</td>
+                <td>0.004096539</td>
+                <td>0.460663128</td>
+                <td>0.474778852</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>2809.7</td>
+                <td>40.73146433</td>
+                <td>56.93866095</td>
+                <td>2720</td>
+                <td>2905</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.162598113</td>
+                <td>0.002363745</td>
+                <td>0.003304288</td>
+                <td>0.157360951</td>
+                <td>0.168116392</td>
+            </tr>
+        <tr>
+          <td rowspan="13">Month 3</td>
+                <td>System.NumberOut</td>
+                <td>Number Out</td>
+                <td>System</td>
+                <td>6694.7</td>
+                <td>41.95683277</td>
+                <td>58.65160792</td>
+                <td>6596</td>
+                <td>6759</td>
+            </tr>
+            <tr>
+                <td>Barista.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>6697.5</td>
+                <td>41.81184792</td>
+                <td>58.44893308</td>
+                <td>6599</td>
+                <td>6761</td>
+            </tr>
+            <tr>
+                <td>Barista.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.894794001</td>
+                <td>0.008277721</td>
+                <td>0.011571456</td>
+                <td>0.873092019</td>
+                <td>0.915189036</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>3710.9</td>
+                <td>51.80998422</td>
+                <td>72.42536388</td>
+                <td>3572</td>
+                <td>3845</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.736520814</td>
+                <td>0.010545295</td>
+                <td>0.014741307</td>
+                <td>0.708631671</td>
+                <td>0.764882145</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberIn</td>
+                <td>Number In</td>
+                <td>Entity</td>
+                <td>6704.4</td>
+                <td>39.44090457</td>
+                <td>55.13458282</td>
+                <td>6624</td>
+                <td>6770</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberOut</td>
+                <td>Number Out</td>
+                <td>Entity</td>
+                <td>6694.7</td>
+                <td>41.95683277</td>
+                <td>58.65160792</td>
+                <td>6596</td>
+                <td>6759</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>748.5</td>
+                <td>22.12408209</td>
+                <td>30.92733419</td>
+                <td>709</td>
+                <td>809</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.125817651</td>
+                <td>0.003643975</td>
+                <td>0.005093926</td>
+                <td>0.119396958</td>
+                <td>0.135281767</td>
+            </tr>
+            <tr>
+                <td>Service Counter.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>6697.5</td>
+                <td>41.81184792</td>
+                <td>58.44893308</td>
+                <td>6599</td>
+                <td>6761</td>
+            </tr>
+            <tr>
+                <td>Service Counter.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.498518294</td>
+                <td>0.002959392</td>
+                <td>0.004136944</td>
+                <td>0.491192593</td>
+                <td>0.503317432</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>2986.7</td>
+                <td>40.85690757</td>
+                <td>57.11401852</td>
+                <td>2903</td>
+                <td>3068</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.172835844</td>
+                <td>0.002362925</td>
+                <td>0.003303141</td>
+                <td>0.168012929</td>
+                <td>0.177564021</td>
+            </tr>
+        <tr>
+          <td rowspan="13">Month 4</td>
+                <td>System.NumberOut</td>
+                <td>Number Out</td>
+                <td>System</td>
+                <td>7123.8</td>
+                <td>55.50030474</td>
+                <td>77.58407626</td>
+                <td>7004</td>
+                <td>7245</td>
+            </tr>
+            <tr>
+                <td>Barista.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>7126.8</td>
+                <td>55.50030474</td>
+                <td>77.58407626</td>
+                <td>7007</td>
+                <td>7248</td>
+            </tr>
+            <tr>
+                <td>Barista.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.959645811</td>
+                <td>0.01009228</td>
+                <td>0.014108035</td>
+                <td>0.934779792</td>
+                <td>0.980574691</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>3958.1</td>
+                <td>43.44866608</td>
+                <td>60.73704709</td>
+                <td>3875</td>
+                <td>4059</td>
+            </tr>
+            <tr>
+                <td>Coffee Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.785170082</td>
+                <td>0.008559658</td>
+                <td>0.011965577</td>
+                <td>0.769111562</td>
+                <td>0.805074783</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberIn</td>
+                <td>Number In</td>
+                <td>Entity</td>
+                <td>7158.7</td>
+                <td>70.4278875</td>
+                <td>98.45139805</td>
+                <td>7016</td>
+                <td>7316</td>
+            </tr>
+            <tr>
+                <td>Customer.NumberOut</td>
+                <td>Number Out</td>
+                <td>Entity</td>
+                <td>7123.8</td>
+                <td>55.50030474</td>
+                <td>77.58407626</td>
+                <td>7004</td>
+                <td>7245</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>790.1</td>
+                <td>31.18068168</td>
+                <td>43.58758743</td>
+                <td>726</td>
+                <td>870</td>
+            </tr>
+            <tr>
+                <td>Hot Chocolate Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.133363831</td>
+                <td>0.005175536</td>
+                <td>0.0072349</td>
+                <td>0.122674933</td>
+                <td>0.146652208</td>
+            </tr>
+            <tr>
+                <td>Service Counter.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>7126.8</td>
+                <td>55.50030474</td>
+                <td>77.58407626</td>
+                <td>7007</td>
+                <td>7248</td>
+            </tr>
+            <tr>
+                <td>Service Counter.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.530497904</td>
+                <td>0.004344973</td>
+                <td>0.006073853</td>
+                <td>0.520344568</td>
+                <td>0.540108865</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.NumberSeized</td>
+                <td>Total Number Seized</td>
+                <td>Resource</td>
+                <td>3163.8</td>
+                <td>52.1396556</td>
+                <td>72.88621269</td>
+                <td>3043</td>
+                <td>3284</td>
+            </tr>
+            <tr>
+                <td>Tea Machine.ScheduledUtilization</td>
+                <td>Scheduled Utilization</td>
+                <td>Resource</td>
+                <td>0.183081066</td>
+                <td>0.003010286</td>
+                <td>0.004208089</td>
+                <td>0.176089829</td>
+                <td>0.189967464</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

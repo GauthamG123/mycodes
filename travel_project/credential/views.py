@@ -1,6 +1,13 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
+from django.http import HttpResponse
+from .forms import RegistrationForm
+
+def registration_form(request):
+    if request.method == 'POST':
+        return redirect('success.html')
+    return render(request, 'loan.html')
 
 # Create your views here.
 def login(request):
@@ -43,5 +50,4 @@ def register(request):
         else:
             messages.info(request,"Password Not match")
             return redirect('register')
-        return redirect('/')
     return render(request, 'register.html')
