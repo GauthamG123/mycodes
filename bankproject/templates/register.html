@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Registration</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Enter username"><br>
+            <input type="text" name="first_name" placeholder="Enter your firstname"><br>
+            <input type="text" name="last_name" placeholder="Enter your lastname"><br>
+            <input type="email" name="email" placeholder="Enter your email id"><br>
+            <input type="password" name="password" placeholder="Enter your password"><br>
+            <input type="password" name="password1" placeholder="Re-enter password"><br>
+            <input type="submit" value="Register">
+        </form>
+
+        {% for msg in messages %}
+   {{ msg }}
+{% endfor %}
+    </div>
+</body>
+</html>

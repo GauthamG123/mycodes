@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Application</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="success">
+</form>
+<div id="successPopup" style="display:none;">
+    <p>Application accepted</p>
+    <button onclick="window.location.href='/'">Return to Home Page</button>
+</div>
+</body>
+</html>
