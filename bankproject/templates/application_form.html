@@ -1,26 +1,141 @@
-<html>
+<!-- application_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Application</title>
+    <meta name="viewport" content="width=device-width">
+    <title>Application Form</title>
     <style>
         body {
             display: flex;
+            flex-direction: column; /* Adjusting layout to column */
             align-items: center;
-            justify-content: center;
-            height: 100vh;
+            justify-content: flex-start; /* Aligning content to the top */
+            min-height: 100vh;
             margin: 0;
+        }
+
+        h1 {
+            margin-top: 20px; /* Margin for the heading */
+        }
+
+        div {
+            text-align: center;
+            width: 100%;
+            max-width: 400px; /* Limiting the width for better readability */
+            margin: auto; /* Centering the form */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 10px; /* Adding some space above the message */
         }
     </style>
 </head>
 <body>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="success">
-</form>
-<div id="successPopup" style="display:none;">
-    <p>Application accepted</p>
-    <button onclick="window.location.href='/'">Return to Home Page</button>
-</div>
+    <h1>Application Form</h1>
+
+    <form method="post" action="{% url 'bankapp:submit_application' %}">
+        {% csrf_token %}
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="dob">DOB:</label>
+        <input type="date" name="dob" required><br>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" required><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female" required> Female
+        <input type="radio" name="gender" value="other" required> Other
+        <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="address">Address:</label>
+        <textarea name="address" required></textarea><br>
+
+        <label for="district">District:</label>
+        <select name="district" id="district" onchange="updateBranches()" required>
+            <option value="ernakulam">Ernakulam</option>
+            <option value="trivandrum">Trivandrum</option>
+            <option value="kollam">Kollam</option>
+            <option value="alappuzha">Alappuzha</option>
+            <option value="kozhikode">Kozhikode</option>
+        </select><br>
+
+        <label for="branch">Branch:</label>
+        <select name="branch" id="branch" required>
+        </select><br>
+
+        <label for="account_type">Account Type:</label>
+        <select name="account_type" required>
+            <option value="savings">Savings Account</option>
+            <option value="current">Current Account</option>
+        </select><br>
+
+        <label>Materials Provide:</label><br>
+        <input type="checkbox" name="materials" value="debit_card"> Debit Card
+        <input type="checkbox" name="materials" value="credit_card"> Credit Card
+        <input type="checkbox" name="materials" value="cheque_book"> Cheque Book
+        <br>
+
+        <button type="submit">Submit</button>
+        <button type="button" onclick="window.location.href='{% url 'bankapp:home' %}'">Home</button>
+    </form>
+
+    <p>{{ message }} <a href="{% url 'bankapp:home' %}">Back to Home</a></p>
+
+    <script>
+        function updateBranches() {
+            var districtSelect = document.getElementById('district');
+            var branchSelect = document.getElementById('branch');
+            var selectedDistrict = districtSelect.options[districtSelect.selectedIndex].value;
+
+            branchSelect.innerHTML = '';
+
+             var branches = {
+                'ernakulam': ['E1', 'E2'],
+                'trivandrum': ['T1', 'T2'],
+                'kollam': ['K1', 'K2' , 'K3'],
+                'alappuzha': ['A1', 'A2'],
+                'kozhikode' : ['C1','C2','C3'],
+            };
+            branches[selectedDistrict].forEach(function(branch) {
+                var option = document.createElement('option');
+                option.value = branch;
+                option.text = branch;
+                branchSelect.add(option);
+            });
+        }
+    </script>
 </body>
 </html>

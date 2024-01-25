@@ -17,7 +17,8 @@
         }
 
         form {
-            width: 300px; /* Set your desired width */
+            width: 300px;
+            height:100vh;
             margin: auto;
         }
 
@@ -30,9 +31,15 @@
             background-color:green;
             color:white;
         }
-        h1 {
-           color:black;
-           font-size:200%;
+
+        button {
+            background-color: #4caf50; /* Green color */
+            color: #fff; /* White text color */
+            padding: 10px 20px; /* Padding for better visual */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -44,7 +51,9 @@
         <input type="text" name="username" placeholder="Enter username"><br>
         <input type="password" name="password" placeholder="Enter password"><br>
         <input type="submit" value="Submit">
+        <button type="button" onclick="window.location.href='{% url 'bankapp:register' %}'">Register</button>
     </form>
+    <p>New User <a href="{% url 'bankapp:register' %}">Login</a></p>
         {% for message in messages %}
     {{ message }}
 {% endfor %}

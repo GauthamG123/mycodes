@@ -1,11 +1,10 @@
+# forms.py
 from django import forms
-from django.forms import DateInput
-from .models import Application
 
-class ApplicationForm(forms.ModelForm):
-    class Meta:
-        model = Application
-        fields = ['name', 'dob', 'age', 'gender', 'phone_number', 'email', 'address', 'district', 'branch','account_type', 'debit_card', 'credit_card', 'cheque_book']
-        widgets = {
-                    'dob': DateInput(attrs={'type': 'date'}),
-                }
+class RegistrationForm(forms.Form):
+    username = forms.CharField(max_length=30, required=True, widget=forms.TextInput(attrs={'placeholder': 'Enter username'}))
+    first_name = forms.CharField(max_length=30, required=True, widget=forms.TextInput(attrs={'placeholder': 'Enter your firstname'}))
+    last_name = forms.CharField(max_length=30, required=True, widget=forms.TextInput(attrs={'placeholder': 'Enter your lastname'}))
+    email = forms.EmailField(max_length=100, required=True, widget=forms.EmailInput(attrs={'placeholder': 'Enter your email id'}))
+    password = forms.CharField(max_length=30, required=True, widget=forms.PasswordInput(attrs={'placeholder': 'Enter your password'}))
+    password1 = forms.CharField(max_length=30, required=True, widget=forms.PasswordInput(attrs={'placeholder': 'Re-enter password'}))
